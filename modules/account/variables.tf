@@ -1,7 +1,7 @@
 variable "name" {
   description = "(Required) Friendly name for the member account."
   type        = string
-  }
+}
 
 variable "email" {
   description = "(Required) Email address of the owner to assign to the new member account."
