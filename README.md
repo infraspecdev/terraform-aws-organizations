@@ -26,9 +26,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_enabled_policy_types"></a> [enabled\_policy\_types](#input\_enabled\_policy\_types) | (Optional) List of Organizations policy types to enable in the Organization Root. | `list(string)` | `[]` | no |
-| <a name="input_feature_set"></a> [feature\_set](#input\_feature\_set) | (Optional) Specify "ALL" (default) or "CONSOLIDATED\_BILLING". | `string` | n/a | yes |
-| <a name="input_service_access_principals"></a> [service\_access\_principals](#input\_service\_access\_principals) | (Optional) List of AWS service principal names for which you want to enable integration with your organization. | `list(string)` | `[]` | no |
+| <a name="input_aws_enabled_policy_types"></a> [aws\_enabled\_policy\_types](#input\_aws\_enabled\_policy\_types) | (Optional) List of Organizations policy types to enable in the Organization Root. | `list(string)` | `[]` | no |
+| <a name="input_aws_feature_set"></a> [aws\_feature\_set](#input\_aws\_feature\_set) | (Optional) Specify "ALL" (default) or "CONSOLIDATED\_BILLING". | `string` | n/a | yes |
+| <a name="input_aws_service_access_principals"></a> [aws\_service\_access\_principals](#input\_aws\_service\_access\_principals) | (Optional) List of AWS service principal names for which you want to enable integration with your organization. | `list(string)` | `[]` | no |
 
 ## Outputs
 
