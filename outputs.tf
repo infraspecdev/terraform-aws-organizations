@@ -1,5 +1,5 @@
 output "aws_organizations_organization_accounts" {
-  description = "List of organization accounts including the master account."
+  description = "List of organization accounts including the master account. "
   value       = aws_organizations_organization.org.accounts
 }
 
