@@ -21,3 +21,18 @@ jobs:
           output-file: README.md
           output-method: replace
           git-push: true
+
+      - name: Ensure newline at end of README files
+        run: |
+          find . -type f -name 'README.md' -exec sh -c 'echo >> "{}"' \;
+        working-directory: ${{ github.workspace }}
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Fix newline at end of README.md files"
+          git push origin ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
