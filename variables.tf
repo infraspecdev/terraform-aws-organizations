@@ -1,4 +1,4 @@
-variable "aws_service_access_principals" {
+variable "service_access_principals" {
   description = "(Optional) List of AWS service principal names for which you want to enable integration with your organization."
   type        = list(string)
   default     = []
