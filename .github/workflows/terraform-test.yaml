@@ -1,0 +1,37 @@
+name: Terraform Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  terraform-test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials from AWS account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-session-name: GitHub-OIDC-TERRAFORM
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.2.5
+
+      - name: Terraform Init
+        id: init
+        run: terraform init
+
+      - name: Terraform test
+        id: test
+        run: terraform test
