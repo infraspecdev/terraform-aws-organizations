@@ -7,6 +7,7 @@ variable "name" {
 variable "parent_id" {
   description = "ID of the parent organizational unit, which may be the root."
   type        = string
+  default     = ""
 }
 
 variable "tags" {
