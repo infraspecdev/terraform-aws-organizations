@@ -1,23 +1,23 @@
 # Attribute validations for account sub module
-run "account_parentId_match" {
-  command = plan
+    run "account_parentId_match" {
+      command = plan
 
-  variables {
-    name               = "some_user_name"
-    email              = "randomPrefix@randomDomain.com"
-    parent_id          = "ou-rndm-parentid"
-    expected_parent_id = "ou-rndm-parentid"
-  }
+      variables {
+        name               = "some_user_name"
+        email              = "randomPrefix@randomDomain.com"
+        parent_id          = "ou-rndm-parentid"
+        expected_parent_id = "ou-rndm-parentid"
+      }
 
-  module {
-    source = "./modules/account/"
-  }
+      module {
+        source = "./modules/account/"
+      }
 
-  assert {
-    condition     = aws_organizations_account.member_account.parent_id == var.expected_parent_id
-    error_message = "Account parent_id mismatch after creation"
-  }
-}
+      assert {
+        condition     = aws_organizations_account.member_account.parent_id == var.expected_parent_id
+        error_message = "Account parent_id mismatch after creation"
+      }
+    }
 
 run "account_name_match" {
   command = plan
