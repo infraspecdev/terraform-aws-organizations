@@ -1,4 +1,4 @@
-name: 'Lambda S3 Notification Module Release'
+name: 'AWS Organizations Module Release'
 
 on:
   push:
