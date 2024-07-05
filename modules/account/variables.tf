@@ -25,6 +25,17 @@ variable "iam_user_access_to_billing" {
   }
 }
 
+variable "close_on_deletion" {
+  description = "(Optional) If true, a deletion event will close the account. Otherwise, it will only remove from the organization."
+  type        = bool
+  default     = true
+
+  validation {
+    condition     = contains([true, false], var.close_on_deletion)
+    error_message = "Allowed values for close_on_deletion: true or false"
+  }
+}
+
 variable "tags" {
   description = "(Optional) Key-value map of resource tags."
   type        = map(string)

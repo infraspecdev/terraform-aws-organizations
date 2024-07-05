@@ -4,4 +4,5 @@ resource "aws_organizations_account" "member_account" {
   parent_id                  = var.parent_id
   iam_user_access_to_billing = var.iam_user_access_to_billing
   tags                       = var.tags
+  close_on_deletion          = var.close_on_deletion
 }
