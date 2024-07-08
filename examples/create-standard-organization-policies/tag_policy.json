@@ -1,0 +1,145 @@
+{
+  "tags": {
+    "Owner": {
+      "tag_key": {
+        "@@assign": "Owner"
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "Team": {
+      "tag_key": {
+        "@@assign": "Team"
+      },
+      "tag_value": {
+        "@@assign": ["DevOps"]
+      },
+      "enforced_for": {
+        "@@assign": ["ec2:instance"]
+      }
+    },
+    "Environment": {
+      "tag_key": {
+        "@@assign": "Environment"
+      },
+      "tag_value": {
+        "@@assign": ["Development", "Production", "Staging"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "CostCenter": {
+      "tag_key": {
+        "@@assign": "CostCenter"
+      },
+      "tag_value": {
+        "@@assign": ["General"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "DataClassification": {
+      "tag_key": {
+        "@@assign": "DataClassification"
+      },
+      "tag_value": {
+        "@@assign": ["Public", "Internal", "Confidential"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "Service": {
+      "tag_key": {
+        "@@assign": "Service"
+      },
+      "tag_value": {
+        "@@assign": ["Micro", "Monolithic"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "ManagedBy": {
+      "tag_key": {
+        "@@assign": "ManagedBy"
+      },
+      "tag_value": {
+        "@@assign": ["Terraform", "Manual"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    },
+    "Compliance": {
+      "tag_key": {
+        "@@assign": "Compliance"
+      },
+      "tag_value": {
+        "@@assign": ["N/A", "NIST", "HIPAA", "GDPR"]
+      },
+      "enforced_for": {
+        "@@assign": [
+          "ec2:instance",
+          "ec2:vpc",
+          "ec2:subnet",
+          "ec2:natgateway",
+          "ec2:security-group",
+          "ec2:route-table",
+          "ec2:internet-gateway"
+        ]
+      }
+    }
+  }
+}
