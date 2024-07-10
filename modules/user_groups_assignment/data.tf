@@ -29,5 +29,3 @@ data "aws_identitystore_group" "existing_sso_group" {
     }
   }
 }
-
-

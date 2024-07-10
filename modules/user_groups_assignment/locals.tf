@@ -1,4 +1,4 @@
-# - Users and Groups 
+# - Users and Groups
 locals {
   # Create a new local variable by flattening the complex type given in the variable "sso_users"
   flatten_user_data = flatten([
@@ -17,4 +17,3 @@ locals {
   # - Fetch SSO Instance ARN and SSO Instance ID -
   sso_instance_id = tolist(data.aws_ssoadmin_instances.sso_instance.identity_store_ids)[0]
 }
-
