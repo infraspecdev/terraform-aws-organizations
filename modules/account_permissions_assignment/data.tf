@@ -5,7 +5,8 @@ resource "null_resource" "sso_group_dependency" {
 }
 
 data "aws_identitystore_group" "this" {
-  for_each          = local.group_list
+  for_each = local.group_list
+
   identity_store_id = local.identity_store_id
 
   alternate_identifier {
