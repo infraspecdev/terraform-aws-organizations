@@ -25,4 +25,3 @@ locals {
   ])
   permission_set_list = toset(local.all_permission_sets)
 }
-

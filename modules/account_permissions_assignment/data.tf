@@ -36,6 +36,3 @@ data "aws_ssoadmin_permission_set" "this" {
   name         = each.value
   depends_on   = [null_resource.sso_permission_set_dependency]
 }
-
-
-
