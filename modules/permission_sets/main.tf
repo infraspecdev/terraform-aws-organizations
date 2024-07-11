@@ -73,4 +73,3 @@ resource "aws_ssoadmin_customer_managed_policy_attachment" "this" {
   }
   depends_on = [aws_ssoadmin_permission_set_inline_policy.this]
 }
-

@@ -4,7 +4,7 @@ variable "permission_sets" {
     description      = string
     session_duration = optional(string, "PT1H")
     tags             = optional(map(string), null)
-    inline_policy    = optional(string, null)     # Inline policy in JSON format 
+    inline_policy    = optional(string, null)     # Inline policy in JSON format
     managed_policies = optional(list(string), []) # list of ARN's of managed policies
     customer_managed_policies = optional(list(object({
       name = string

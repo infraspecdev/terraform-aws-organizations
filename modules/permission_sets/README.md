@@ -1,5 +1,5 @@
 # Terraform AWS Organizations Permission-Sets Module
-A Terraform module for creating and managing AWS SSO (Single Sign-On) Permission Sets within AWS Organizations 
+A Terraform module for creating and managing AWS SSO (Single Sign-On) Permission Sets within AWS Organizations
 
 ## Requirements
 
