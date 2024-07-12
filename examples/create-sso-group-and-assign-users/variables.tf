@@ -17,6 +17,3 @@ variable "user_groups_map" {
   description = "(Optional)Mapping of users to their respective sso groups within the Organisation. For example map of `user=[sso_groups]"
   default     = {}
 }
-
-
-

@@ -15,4 +15,3 @@ data "aws_identitystore_user" "default" {
     }
   }
 }
-
