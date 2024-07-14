@@ -1,9 +1,9 @@
 variable "permission_sets" {
   description = <<EOF
-  (Required)A map of permission set objects with permission set name as the key. Each object contains:
+  (Required)A map of permission set objects with key as the permission set name. Each object contains:
   - name: The name of the permission set.
   - description: A brief description of the permission set.
-  - session_duration: Optional session duration for the permission set (default is PT1H).
+  - session_duration: Optional session duration for the permission set (default is null).
   - relay_state: Optional relay state for the permission set (default is null).
   - tags: Optional map of tags to associate with the permission set.
   - inline_policy: The inline policy content in JSON format.
@@ -25,24 +25,6 @@ variable "permission_sets" {
       path = optional(string, "/")
     }))
   }))
-
-  validation {
-    condition     = alltrue([for ps in var.permission_sets : (ps.inline_policy != null)])
-    error_message = "Inline policy cannot be null"
-  }
-  validation {
-    condition     = alltrue([for ps in var.permission_sets : can(jsondecode(ps.inline_policy)) if ps.inline_policy != ""])
-    error_message = "Inline policy must be a valid JSON string."
-  }
-  validation {
-    condition     = alltrue([for ps in var.permission_sets : (ps.managed_policies != null)])
-    error_message = "Managed policies cannot be null"
-  }
-  validation {
-    condition     = alltrue([for ps in var.permission_sets : (ps.customer_managed_policies != null)])
-    error_message = "Customer managed policies cannot be null "
-  }
-
 }
 
 variable "tags" {
