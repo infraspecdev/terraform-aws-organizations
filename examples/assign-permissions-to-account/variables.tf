@@ -13,20 +13,3 @@ variable "account_assignments" {
     principal_type  = string
   }))
 }
-variable "identitystore_group_depends_on" {
-  description = "A list of parameters (For example group IDs)to use for data resources to depend on. This is to avoid module depends_on as that will unnecessarily create the module resources"
-  type        = list(string)
-  default     = []
-}
-
-variable "identitystore_user_depends_on" {
-  description = "A list of parameters (For example user IDs)to use for data resources to depend on. This is to avoid module depends_on as that will unnecessarily create the module resources"
-  type        = list(string)
-  default     = []
-}
-
-variable "identitystore_permission_set_depends_on" {
-  description = "A list of parameters (For example permission set ARNs)to use for data resources to depend on. This is to avoid module depends_on as that will unnecessarily create the module resources"
-  type        = list(string)
-  default     = []
-}
