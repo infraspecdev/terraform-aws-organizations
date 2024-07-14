@@ -26,9 +26,3 @@ variable "permission_sets" {
     }))
   }))
 }
-
-variable "tags" {
-  description = "(Optional) Key-value map of resource tags."
-  type        = map(string)
-  default     = null
-}
