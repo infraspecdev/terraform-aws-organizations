@@ -1,8 +1,7 @@
 # Attribute validations for permission_sets sub module
 run "validate_inline_policy" {
-  module {
-    source = "./modules/permission_sets"
-  }
+  command = plan
+
   variables {
     permission_sets = {
       "dummy_ps" = {
@@ -15,16 +14,18 @@ run "validate_inline_policy" {
     }
   }
 
-  command = plan
+  module {
+    source = "./modules/permission_sets"
+  }
+
   expect_failures = [
     var.permission_sets["dummy_ps"]
   ]
 }
 
 run "validate_inline_policy_json_content" {
-  module {
-    source = "./modules/permission_sets"
-  }
+  command = plan
+
   variables {
     permission_sets = {
       "dummy_ps" = {
@@ -37,7 +38,10 @@ run "validate_inline_policy_json_content" {
     }
   }
 
-  command = plan
+  module {
+    source = "./modules/permission_sets"
+  }
+
   expect_failures = [
     var.permission_sets["dummy_ps"]
   ]
@@ -45,9 +49,8 @@ run "validate_inline_policy_json_content" {
 
 
 run "validate_permission_set_name" {
-  module {
-    source = "./modules/permission_sets"
-  }
+  command = plan
+
   variables {
     permission_sets = {
       "dummy_ps" = {
@@ -59,7 +62,11 @@ run "validate_permission_set_name" {
       }
     }
   }
-  command = plan
+
+  module {
+    source = "./modules/permission_sets"
+  }
+
 
   assert {
     condition     = aws_ssoadmin_permission_set.this["dummy_ps"].name == var.permission_sets["dummy_ps"].name
@@ -68,9 +75,8 @@ run "validate_permission_set_name" {
 }
 
 run "validate_permission_set_description" {
-  module {
-    source = "./modules/permission_sets"
-  }
+  command = plan
+
   variables {
     permission_sets = {
       "dummy_ps" = {
@@ -82,7 +88,10 @@ run "validate_permission_set_description" {
       },
     }
   }
-  command = plan
+
+  module {
+    source = "./modules/permission_sets"
+  }
 
   assert {
     condition     = aws_ssoadmin_permission_set.this["dummy_ps"].description == var.permission_sets["dummy_ps"].description
@@ -91,9 +100,9 @@ run "validate_permission_set_description" {
 }
 
 run "check_permission_set_creation" {
-  module {
-    source = "./modules/permission_sets"
-  }
+
+  command = apply
+
   variables {
     permission_sets = {
       "dummy_ps" = {
@@ -105,7 +114,10 @@ run "check_permission_set_creation" {
       },
     }
   }
-  command = apply
+
+  module {
+    source = "./modules/permission_sets"
+  }
 
   assert {
     condition     = can(aws_ssoadmin_permission_set.this["dummy_ps"])

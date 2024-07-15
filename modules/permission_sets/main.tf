@@ -14,9 +14,6 @@ resource "aws_ssoadmin_permission_set_inline_policy" "this" {
   inline_policy      = each.value
   instance_arn       = local.sso_instance_arn
   permission_set_arn = aws_ssoadmin_permission_set.this[each.key].arn
-
-  #Ensures that this resource waits for the specified permission set to be created or updated before proceeding.
-  depends_on = [aws_ssoadmin_permission_set.this]
 }
 
 resource "aws_ssoadmin_managed_policy_attachment" "this" {
@@ -25,9 +22,6 @@ resource "aws_ssoadmin_managed_policy_attachment" "this" {
   instance_arn       = local.sso_instance_arn
   managed_policy_arn = each.value.policy_arn
   permission_set_arn = aws_ssoadmin_permission_set.this[each.value.ps_name].arn
-
-  #Ensures that this resource waits for the specified permission set to be created or updated before proceeding.
-  depends_on = [aws_ssoadmin_permission_set.this]
 }
 
 resource "aws_ssoadmin_customer_managed_policy_attachment" "this" {
@@ -38,7 +32,4 @@ resource "aws_ssoadmin_customer_managed_policy_attachment" "this" {
     name = each.value.policy_name
     path = each.value.policy_path
   }
-
-  #Ensures that this resource waits for the specified permission set to be created or updated before proceeding.
-  depends_on = [aws_ssoadmin_permission_set.this]
 }
