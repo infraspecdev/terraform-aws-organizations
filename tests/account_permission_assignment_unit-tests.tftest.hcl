@@ -1,4 +1,6 @@
 run "validate_account_id_for_non_digits_value" {
+  command = plan
+
   variables {
     account_assignments = [{
       account_id      = "dummyId"
@@ -8,16 +10,19 @@ run "validate_account_id_for_non_digits_value" {
       }
     ]
   }
+
   module {
     source = "./modules/account_permissions_assignment"
   }
-  command = plan
+
   expect_failures = [
     var.account_assignments.this[0].account_id
   ]
 }
 
 run "validate_account_id_digits" {
+  command = plan
+
   variables {
     account_assignments = [{
       account_id      = "dummyId"
@@ -27,16 +32,19 @@ run "validate_account_id_digits" {
       }
     ]
   }
+
   module {
     source = "./modules/account_permissions_assignment"
   }
-  command = plan
+
   expect_failures = [
     var.account_assignments.this[0].account_id
   ]
 }
 
 run "validate_empty_permission_sets_list" {
+  command = plan
+
   variables {
     account_assignments = [{
       account_id      = "123456789012"
@@ -46,16 +54,19 @@ run "validate_empty_permission_sets_list" {
       }
     ]
   }
+
   module {
     source = "./modules/account_permissions_assignment"
   }
-  command = plan
+
   expect_failures = [
     var.account_assignments.this[0].permission_sets
   ]
 }
 
 run "validate_empty_principal_list" {
+  command = plan
+
   variables {
     account_assignments = [{
       account_id      = "123456789012"
@@ -65,16 +76,19 @@ run "validate_empty_principal_list" {
       }
     ]
   }
+
   module {
     source = "./modules/account_permissions_assignment"
   }
-  command = plan
+
   expect_failures = [
     var.account_assignments.this[0].principal_names
   ]
 }
 
 run "validate_principal_type" {
+  command = plan
+
   variables {
     account_assignments = [{
       account_id      = "123456789012"
@@ -84,10 +98,11 @@ run "validate_principal_type" {
       }
     ]
   }
+
   module {
     source = "./modules/account_permissions_assignment"
   }
-  command = plan
+
   expect_failures = [
     var.account_assignments.this[0].principal_type
   ]
