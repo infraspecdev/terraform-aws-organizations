@@ -12,7 +12,7 @@ run "validate_account_id_for_non_digits_value" {
   }
 
   module {
-    source = "./modules/account_permissions_assignment"
+    source = "./modules/account_users_and_groups_assignments"
   }
 
   expect_failures = [
@@ -34,7 +34,7 @@ run "validate_account_id_digits" {
   }
 
   module {
-    source = "./modules/account_permissions_assignment"
+    source = "./modules/account_users_and_groups_assignments"
   }
 
   expect_failures = [
@@ -56,7 +56,7 @@ run "validate_empty_permission_sets_list" {
   }
 
   module {
-    source = "./modules/account_permissions_assignment"
+    source = "./modules/account_users_and_groups_assignments"
   }
 
   expect_failures = [
@@ -78,7 +78,7 @@ run "validate_empty_principal_list" {
   }
 
   module {
-    source = "./modules/account_permissions_assignment"
+    source = "./modules/account_users_and_groups_assignments"
   }
 
   expect_failures = [
@@ -100,7 +100,7 @@ run "validate_principal_type" {
   }
 
   module {
-    source = "./modules/account_permissions_assignment"
+    source = "./modules/account_users_and_groups_assignments"
   }
 
   expect_failures = [
