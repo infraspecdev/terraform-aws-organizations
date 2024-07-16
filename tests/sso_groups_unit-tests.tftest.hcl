@@ -1,45 +1,57 @@
-run "checks_identity_group_creation" {
 
-  module {
-    source = "./modules/sso_groups"
-  }
-
-  variables {
-    sso_groups = {
-      "Dummy_Group" = {
-        group_name        = "Dummy_Group"
-        group_description = "Dummy_Group for testing purpose"
-      }
-    }
-  }
-
+#Argument validation for user-group-assignment module
+run "check_for_invalid_user" {
   command = plan
-
-  assert {
-    condition     = aws_identitystore_group.this["Dummy_Group"].display_name == "Dummy_Group"
-    error_message = "Group 'Dummy_Group' doesn't match"
-  }
-
-  assert {
-    condition     = aws_identitystore_group.this["Dummy_Group"].description == var.sso_groups["Dummy_Group"].group_description
-    error_message = "Group description ${var.sso_groups["Dummy_Group"].group_description} doesn't match"
-  }
-}
-
-run "check_for_empty_groups" {
-  module {
-    source = "./modules/sso_groups"
-  }
 
   variables {
     user_groups_mapping = {
-      "user" = []
+      "dummyUser@gmail.com" = [
+        "Group1"
+      ]
     }
   }
 
-  command = plan
+  module {
+    source = "./modules/sso_groups"
+  }
 
   expect_failures = [
-    var.user_groups_mapping["user"]
+    var.user_groups_mapping
+  ]
+}
+
+run "check_for_valid_user_with_no_groups" {
+  command = plan
+
+  variables {
+    user_groups_mapping = {
+      "dummyUser@gmail.com" = []
+    }
+  }
+
+  module {
+    source = "./modules/sso_groups"
+  }
+
+  expect_failures = [
+    var.user_groups_mapping
+  ]
+}
+
+run "check_for_invalid_group" {
+  command = plan
+
+  variables {
+    user_groups_mapping = {
+      "dummyUser@gmail.com" = [""]
+    }
+  }
+
+  module {
+    source = "./modules/sso_groups"
+  }
+
+  expect_failures = [
+    var.user_groups_mapping
   ]
 }
