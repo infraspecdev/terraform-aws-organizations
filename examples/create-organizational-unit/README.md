@@ -2,6 +2,19 @@
 
 Configuration in this directory creates a organizational unit  named production with the pareant ou id
 
+## Usage
+
+To run this example you need to execute:
+
+```bash
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
+
+Note that this example may create resources which may cost money. Run `terraform destroy` when you don't need these resources.
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
