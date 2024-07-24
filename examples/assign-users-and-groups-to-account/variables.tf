@@ -12,4 +12,12 @@ variable "account_assignments" {
     principal_names = list(string)
     principal_type  = string
   }))
+  default = [
+    {
+      account_id      = "121212121212"
+      permission_sets = ["StagingDev"]
+      principal_names = ["Staging_Dev"]
+      principal_type  = "GROUP"
+    },
+  ]
 }

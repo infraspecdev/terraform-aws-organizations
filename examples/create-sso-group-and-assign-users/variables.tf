@@ -10,10 +10,19 @@ variable "sso_groups" {
       group_description = string
     }
   ))
+  default = {
+    Org_Staging_Dev : {
+      group_name        = "Org_Staging_Dev"
+      group_description = "Developer access to org staging account"
+    },
+  }
 }
 
 variable "user_groups_map" {
   type        = map(list(string))
   description = "(Optional)Mapping of users to their respective sso groups within the Organisation. For example map of `user=[sso_groups]"
-  default     = {}
+  default = {
+    "employee@org.com" : [
+      "Org_Staging_Dev",
+  ], }
 }

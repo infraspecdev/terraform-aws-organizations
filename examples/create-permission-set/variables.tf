@@ -25,4 +25,16 @@ variable "permission_sets" {
       path = optional(string, "/")
     }))
   }))
+  default = {
+    "AdministratorAccess" = {
+      name                      = "AdministratorAccess",
+      description               = "Allow Full Access to the account",
+      relay_state               = "",
+      session_duration          = "PT12H",
+      tags                      = {},
+      inline_policy             = "",
+      managed_policies          = ["arn:aws:iam::aws:policy/AdministratorAccess"]
+      customer_managed_policies = []
+    },
+  }
 }
