@@ -1,19 +1,19 @@
-# Terraform AWS Organization Account Permissions Assignment Module
-A Terraform module for associating permissions to AWS accounts.
+# Terraform AWS Account Users and Groups Assignments Module
+A Terraform module for assigning users and groups to AWS accounts.
 
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.65.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.51.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | ~> 3.2.2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.58.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.59.0 |
 | <a name="provider_null"></a> [null](#provider\_null) | 3.2.2 |
 
 ## Modules
