@@ -6,7 +6,7 @@ A Terraform module for creating and managing AWS Organizations member account.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=  1.8.4 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.51.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.59.0 |
 
 ## Providers
 
