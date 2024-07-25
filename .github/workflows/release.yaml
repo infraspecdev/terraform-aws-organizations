@@ -23,10 +23,6 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: List files in the repository
-        run: ls -la
-
-
       - name: Release
         uses: cycjimmy/semantic-release-action@v2
         with:
