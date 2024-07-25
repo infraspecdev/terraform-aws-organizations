@@ -23,16 +23,11 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: List files in the repository
-        run: ls -la
-
-      - name: print working directory
-        run: pwd
-
-
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@main
         with:
+          working-dir: .
+          git-push: true
           config-file: .terraform-docs.yaml
 
 
