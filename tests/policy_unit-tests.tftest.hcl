@@ -27,6 +27,7 @@ run "policy_name_match" {
     description   = "Recommend tag policies"
     type          = "TAG_POLICY"
     expected_name = "STANDARD_TAG_POLICIES"
+    target_id     = "some-id"
     tags = {
       "some_key_name"    = "some_value"
       "another_key_name" = "another_value"
@@ -51,6 +52,7 @@ run "policy_content_match" {
     name             = "STANDARD_TAG_POLICIES"
     description      = "Recommend tag policies"
     type             = "TAG_POLICY"
+    target_id        = "some-id"
     expected_content = var.tag_policy_content
     tags = {
       "some_key_name"    = "some_value"
@@ -76,6 +78,7 @@ run "policy_type_match" {
     name          = "STANDARD_TAG_POLICIES"
     description   = "Recommend tag policies"
     type          = "TAG_POLICY"
+    target_id     = "some-id"
     expected_type = "TAG_POLICY"
     tags = {
       "some_key_name"    = "some_value"
@@ -101,6 +104,7 @@ run "policy_description_match" {
     name                 = "STANDARD_TAG_POLICIES"
     description          = "Recommend tag policies"
     expected_description = "Recommend tag policies"
+    target_id            = "some-id"
     type                 = "TAG_POLICY"
     tags = {
       "some_key_name"    = "some_value"
@@ -127,6 +131,7 @@ run "policy_skip_destroy_match" {
     description           = "Recommend tag policies"
     type                  = "TAG_POLICY"
     skip_destroy          = true
+    target_id             = "some-id"
     expected_skip_destroy = true
     tags = {
       "some_key_name"    = "some_value"
@@ -152,6 +157,7 @@ run "policy_tags_match" {
     name        = "STANDARD_TAG_POLICIES"
     description = "Recommend tag policies"
     type        = "TAG_POLICY"
+    target_id   = "some-id"
     tags = {
       "some_key_name"    = "some_value"
       "another_key_name" = "another_value"

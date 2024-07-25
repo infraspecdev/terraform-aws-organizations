@@ -36,3 +36,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "target_id" {
+  description = "(Required) The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to."
+  type        = string
+}
