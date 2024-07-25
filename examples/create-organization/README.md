@@ -16,6 +16,18 @@ Note that this example may create resources which may cost money. Run `terraform
 
 
 <!-- BEGIN_TF_DOCS -->
+    ## Usage
+
+  To run this example you need to execute:
+
+  ```bash
+  $ terraform init
+  $ terraform plan
+  $ terraform apply
+  ```
+
+  Note that this example may create resources which may cost money. Run `terraform destroy` when you don't need these resources.
+
 ## Requirements
 
 | Name | Version |
@@ -25,9 +37,7 @@ Note that this example may create resources which may cost money. Run `terraform
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.56.1 |
+No providers.
 
 ## Modules
 
