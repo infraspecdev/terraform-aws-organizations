@@ -1,5 +1,4 @@
-<!-- BEGIN_TF_DOCS -->
-# Terraform AWS Organizations Account Module
+<!-- BEGIN_TF_DOCS -->\n# Terraform AWS Organizations Account Module
 A Terraform module for creating and managing AWS Organizations member account.
 
 ## Requirements
@@ -42,5 +41,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_aws_organizations_account_arn"></a> [aws\_organizations\_account\_arn](#output\_aws\_organizations\_account\_arn) | The ARN for this account. |
-| <a name="output_aws_organizations_account_id"></a> [aws\_organizations\_account\_id](#output\_aws\_organizations\_account\_id) | The AWS account id. |
-<!-- END_TF_DOCS -->
+| <a name="output_aws_organizations_account_id"></a> [aws\_organizations\_account\_id](#output\_aws\_organizations\_account\_id) | The AWS account id. |\n<!-- END_TF_DOCS -->\n

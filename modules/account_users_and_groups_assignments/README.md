@@ -1,5 +1,4 @@
-<!-- BEGIN_TF_DOCS -->
-# Terraform AWS Account Users and Groups Assignments Module
+<!-- BEGIN_TF_DOCS -->\n# Terraform AWS Account Users and Groups Assignments Module
 A Terraform module for assigning users and groups to AWS accounts.
 
 ## Requirements
@@ -47,5 +46,4 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_assignments"></a> [assignments](#output\_assignments) | The account assignment resources created for AWS SSO. Each resource includes details about the account, permission set, principal, and the status of the assignments. |
-<!-- END_TF_DOCS -->
+| <a name="output_assignments"></a> [assignments](#output\_assignments) | The account assignment resources created for AWS SSO. Each resource includes details about the account, permission set, principal, and the status of the assignments. |\n<!-- END_TF_DOCS -->\n
