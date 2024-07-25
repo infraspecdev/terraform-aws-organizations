@@ -27,5 +27,3 @@ run "check_for_valid_user_with_no_groups" {
     var.user_groups_map
   ]
 }
-
-

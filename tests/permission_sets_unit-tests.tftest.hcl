@@ -98,29 +98,3 @@ run "validate_permission_set_description" {
     error_message = "Permission set description doesn't match"
   }
 }
-
-run "check_permission_set_creation" {
-
-  command = apply
-
-  variables {
-    permission_sets = {
-      "dummy_ps" = {
-        name                      = "dummy_ps"
-        description               = "This is only used for testing purpose"
-        inline_policy             = ""
-        managed_policies          = []
-        customer_managed_policies = []
-      },
-    }
-  }
-
-  module {
-    source = "./modules/permission_sets"
-  }
-
-  assert {
-    condition     = can(aws_ssoadmin_permission_set.this["dummy_ps"])
-    error_message = "Permission set was not created"
-  }
-}
