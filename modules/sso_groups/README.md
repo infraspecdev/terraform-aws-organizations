@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 # Terraform AWS Organizations SSO Groups module
 A Terraform module for creating sso groups and attaching users to the groups within the organisation.
 
@@ -39,3 +40,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_sso_group_ids"></a> [sso\_group\_ids](#output\_sso\_group\_ids) | A map of SSO groups IDs created by this module |
+<!-- END_TF_DOCS -->

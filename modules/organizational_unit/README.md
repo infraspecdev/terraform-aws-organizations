@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 # Terraform AWS Organizational Unit Module
 A Terraform module for creating and managing AWS Organizational Unit.
 
@@ -40,3 +41,4 @@ No modules.
 | <a name="output_aws_organizations_organizational_unit_accounts"></a> [aws\_organizations\_organizational\_unit\_accounts](#output\_aws\_organizations\_organizational\_unit\_accounts) | List of child accounts for org\_unit Organizational Unit. |
 | <a name="output_aws_organizations_organizational_unit_arn"></a> [aws\_organizations\_organizational\_unit\_arn](#output\_aws\_organizations\_organizational\_unit\_arn) | ARN of the organizational unit. |
 | <a name="output_aws_organizations_organizational_unit_id"></a> [aws\_organizations\_organizational\_unit\_id](#output\_aws\_organizations\_organizational\_unit\_id) | Identifier of the organization unit. |
+<!-- END_TF_DOCS -->

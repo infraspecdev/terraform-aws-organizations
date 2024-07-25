@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 # Terraform AWS Organizations Policy Module
 
 A Terraform module for creating and managing AWS Organizations Policy.
@@ -43,3 +44,4 @@ No modules.
 | <a name="output_aws_organizations_policy_arn"></a> [aws\_organizations\_policy\_arn](#output\_aws\_organizations\_policy\_arn) | Amazon Resource Name (ARN) of the policy. |
 | <a name="output_aws_organizations_policy_id"></a> [aws\_organizations\_policy\_id](#output\_aws\_organizations\_policy\_id) | The unique identifier (ID) of the policy. |
 | <a name="output_aws_organizations_policy_tags_all"></a> [aws\_organizations\_policy\_tags\_all](#output\_aws\_organizations\_policy\_tags\_all) | A map of tags assigned to the resource, including those inherited from the provider default\_tags configuration block. |
+<!-- END_TF_DOCS -->
