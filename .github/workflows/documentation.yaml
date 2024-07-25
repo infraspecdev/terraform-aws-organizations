@@ -21,6 +21,8 @@ jobs:
           output-file: README.md
           output-method: replace
           git-push: true
+          template: |
+            <!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->\n{{- printf "\n" -}}
 
       - name: Commit changes
         run: |
