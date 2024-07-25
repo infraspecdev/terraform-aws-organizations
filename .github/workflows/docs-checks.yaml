@@ -1,4 +1,4 @@
-name: Pre-Commit
+name: Terraform Docs & Checks
 
 on:
   push:
@@ -11,11 +11,11 @@ on:
       - master
 
 env:
-  TERRAFORM_DOCS_VERSION: v0.16.0
+  TERRAFORM_DOCS_VERSION: v0.18.0
   TFLINT_VERSION: v0.50.3
 
 jobs:
-  docs:
+  generateDocs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,16 +23,23 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Render terraform docs and push changes back to PR
+      - name: Render and Push terraform docs for main and modules
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: .
           git-push: true
           config-file: .terraform-docs.yaml
 
+      - name: Render and Push terraform docs for examples
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: .
+          git-push: true
+          config-file: .terraform-docs-example.yaml
 
   collectInputs:
     name: Collect workflow inputs
+    needs: generateDocs
     runs-on: ubuntu-latest
     outputs:
       directories: ${{ steps.dirs.outputs.directories }}
