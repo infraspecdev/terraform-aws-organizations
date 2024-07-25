@@ -26,13 +26,7 @@ jobs:
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@main
         with:
-          working-dir: .
-          recursive: true
-          recursive-path: modules
-          output-file: README.md
-          output-method: replace
-          git-push: true
-          template: <!-- BEGIN_TF_DOCS -->\n{{ .Content }}\n<!-- END_TF_DOCS -->\n{{- printf "\n" -}}
+          config-file: .terraform-docs.yml
 
 
   collectInputs:
