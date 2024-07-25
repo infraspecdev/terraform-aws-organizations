@@ -48,4 +48,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_assignments"></a> [assignments](#output\_assignments) | The account assignment resources created for AWS SSO. Each resource includes details about the account, permission set, principal, and the status of the assignments. |
-<!-- END_TF_DOCS -->
+<!-- END_TF_DOCS -->\n

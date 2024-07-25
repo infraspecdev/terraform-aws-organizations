@@ -43,4 +43,4 @@ No modules.
 |------|-------------|
 | <a name="output_aws_organizations_account_arn"></a> [aws\_organizations\_account\_arn](#output\_aws\_organizations\_account\_arn) | The ARN for this account. |
 | <a name="output_aws_organizations_account_id"></a> [aws\_organizations\_account\_id](#output\_aws\_organizations\_account\_id) | The AWS account id. |
-<!-- END_TF_DOCS -->
+<!-- END_TF_DOCS -->\n

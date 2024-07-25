@@ -40,4 +40,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_sso_group_ids"></a> [sso\_group\_ids](#output\_sso\_group\_ids) | A map of SSO groups IDs created by this module |
-<!-- END_TF_DOCS -->
+<!-- END_TF_DOCS -->\n

@@ -51,4 +51,4 @@ No modules.
 | <a name="output_aws_organizations_organization_master_account_id"></a> [aws\_organizations\_organization\_master\_account\_id](#output\_aws\_organizations\_organization\_master\_account\_id) | Identifier of the master account. |
 | <a name="output_aws_organizations_organization_none_master_accounts"></a> [aws\_organizations\_organization\_none\_master\_accounts](#output\_aws\_organizations\_organization\_none\_master\_accounts) | List of organization accounts excluding the master account. |
 | <a name="output_aws_organizations_organization_roots"></a> [aws\_organizations\_organization\_roots](#output\_aws\_organizations\_organization\_roots) | List of organization roots. |
-<!-- END_TF_DOCS -->
+<!-- END_TF_DOCS -->\n

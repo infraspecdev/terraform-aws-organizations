@@ -41,4 +41,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_permission_sets_arns"></a> [permission\_sets\_arns](#output\_permission\_sets\_arns) | A map of the permission sets that were created. Each key is the name of the permission set, and the value contains the ARNs of the created permission sets. |
-<!-- END_TF_DOCS -->
+<!-- END_TF_DOCS -->\n
