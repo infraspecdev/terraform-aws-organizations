@@ -33,15 +33,6 @@ jobs:
           output-method: replace
           git-push: true
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Fix newline at end of README.md files"
-          git push origin ${{ github.event.pull_request.head.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   collectInputs:
     name: Collect workflow inputs
