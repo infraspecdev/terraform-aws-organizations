@@ -26,7 +26,6 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_attach_tag_policy"></a> [attach\_tag\_policy](#module\_attach\_tag\_policy) | ../../modules/policy_attachment | n/a |
 | <a name="module_tag_policy"></a> [tag\_policy](#module\_tag\_policy) | ../../modules/policy | n/a |
 
 ## Resources
