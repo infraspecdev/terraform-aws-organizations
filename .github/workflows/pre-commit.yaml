@@ -15,6 +15,34 @@ env:
   TFLINT_VERSION: v0.50.3
 
 jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Render terraform docs and push changes back to PR
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: .
+          recursive: true
+          recursive-path: modules
+          output-file: README.md
+          output-method: replace
+          git-push: true
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Fix newline at end of README.md files"
+          git push origin ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   collectInputs:
     name: Collect workflow inputs
     runs-on: ubuntu-latest
