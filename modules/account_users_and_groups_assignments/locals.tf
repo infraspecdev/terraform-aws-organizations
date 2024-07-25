@@ -1,5 +1,6 @@
 
 locals {
+  target_type = "AWS_ACCOUNT"
   flatten_account_group_permission = flatten([
     for acc_assignment in var.account_assignments : [
       for ps_name in acc_assignment.permission_sets : [
