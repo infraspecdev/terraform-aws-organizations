@@ -25,6 +25,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_organizations_policy.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_policy) | resource |
+| [aws_organizations_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_policy_attachment) | resource |
 
 ## Inputs
 
@@ -35,6 +36,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | (Required) The friendly name to assign to the policy. | `string` | n/a | yes |
 | <a name="input_skip_destroy"></a> [skip\_destroy](#input\_skip\_destroy) | (Optional) If set to true, destroy will not delete the policy and instead just remove the resource from state. | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) Key-value map of resource tags. | `map(string)` | `{}` | no |
+| <a name="input_target_id"></a> [target\_id](#input\_target\_id) | (Required) The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to. | `string` | n/a | yes |
 | <a name="input_type"></a> [type](#input\_type) | (Optional) The type of policy to create. | `string` | `"SERVICE_CONTROL_POLICY"` | no |
 
 ## Outputs
