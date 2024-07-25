@@ -1,4 +1,5 @@
-<!-- BEGIN_TF_DOCS -->\n# Terraform AWS Organizations Policy Attachement module
+<!-- BEGIN_TF_DOCS -->
+# Terraform AWS Organizations Policy Attachement module
 A Terraform module for attaching policies to organizational unit or accounts
 
 ## Requirements
@@ -34,4 +35,5 @@ No modules.
 
 ## Outputs
 
-No outputs.\n<!-- END_TF_DOCS -->\n
+No outputs.
+<!-- END_TF_DOCS -->\n
