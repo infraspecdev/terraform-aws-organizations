@@ -19,7 +19,7 @@ A Terraform module for creating and managing AWS Organizations.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.59.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.51.0 |
 
 ## Modules
 

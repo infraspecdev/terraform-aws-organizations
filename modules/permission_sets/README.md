@@ -13,7 +13,7 @@ A Terraform module for creating and managing AWS SSO (Single Sign-On) Permission
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.59.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.59.0 |
 
 ## Modules
 
