@@ -1,3 +1,7 @@
+locals {
+  aws_region = "us-east-1"
+}
+
 module "sso_groups" {
   source = "../../modules/sso_groups/"
 

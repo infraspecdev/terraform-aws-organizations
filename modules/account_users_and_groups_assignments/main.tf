@@ -1,7 +1,3 @@
-locals {
-  target_type = "AWS_ACCOUNT"
-}
-
 resource "aws_ssoadmin_account_assignment" "this" {
   for_each = local.assignment_map
 
