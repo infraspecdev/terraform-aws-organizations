@@ -1,11 +1,16 @@
 
 locals {
+
+  account_map = {
+    for account in data.aws_organizations_organization.o.accounts : account.name => account.id
+  }
+
   target_type = "AWS_ACCOUNT"
   flatten_account_group_permission = flatten([
     for acc_assignment in var.account_assignments : [
       for ps_name in acc_assignment.permission_sets : [
         for pr_name in acc_assignment.principal_names : {
-          acc_id         = acc_assignment.account_id
+          acc_id         = account_map[acc_assignment.account_name]
           principal_name = pr_name
           ps_name        = ps_name
           principal_type = acc_assignment.principal_type
