@@ -1,5 +1,3 @@
-data "aws_organizations_organization" "o" {}
-
 resource "null_resource" "sso_group_dependency" {
   triggers = {
     dependency_id = join(",", var.identitystore_group_depends_on)
