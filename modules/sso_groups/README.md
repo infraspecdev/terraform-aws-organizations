@@ -32,7 +32,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_sso_groups"></a> [sso\_groups](#input\_sso\_groups) | A map of objects defining AWS SSO groups to be created. Each object contains:<br>  - group\_name: The name of the SSO group.<br>  - group\_description: A description for the SSO group. | <pre>map(object(<br>    {<br>      group_name        = string<br>      group_description = string<br>    }<br>  ))</pre> | n/a | yes |
+| <a name="input_sso_groups"></a> [sso\_groups](#input\_sso\_groups) | A map of objects defining AWS SSO groups to be created. Each object contains:<br/>  - group\_name: The name of the SSO group.<br/>  - group\_description: A description for the SSO group. | <pre>map(object(<br/>    {<br/>      group_name        = string<br/>      group_description = string<br/>    }<br/>  ))</pre> | n/a | yes |
 | <a name="input_user_groups_map"></a> [user\_groups\_map](#input\_user\_groups\_map) | Mapping of users to their respective sso groups within the Organisation. For example map of `user=[sso_groups]` | `map(list(string))` | `{}` | no |
 
 ## Outputs
